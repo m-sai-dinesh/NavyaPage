@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="login-page active">
+        <div class="login-container">
+            <div class="login-card">
+                <div class="login-header">
+                    <h1>Lost & Found Portal</h1>
+                    <p>Welcome back! Please sign in to your account</p>
+                </div>
+                
+                <form class="login-form" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="username" class="form-control" required placeholder="Enter your username">
+                            <span class="input-icon">👤</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-wrapper">
+                            <input type="password" id="password" class="form-control" required placeholder="Enter your password">
+                            <span class="input-icon">🔒</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <a href="#home" class="btn btn--primary btn--full-width login-btn">
+                        Sign In
+                    </a>
+                </form>
+                
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application Container (Hidden by default) -->
+    <div class="app-container" id="main-app">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Lost & Found</h2>
+                <p class="user-welcome">Welcome, User!</p>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#home" class="nav-link active">
+                    <span class="nav-icon">🏠</span>
+                    Home
+                </a></li>
+                <li><a href="#found-items" class="nav-link">
+                    <span class="nav-icon">📦</span>
+                    Found Items
+                </a></li>
+                <li><a href="#lost-items" class="nav-link">
+                    <span class="nav-icon">🔍</span>
+                    Lost Items
+                </a></li>
+                <li><a href="#search" class="nav-link">
+                    <span class="nav-icon">🔎</span>
+                    Search
+                </a></li>
+                <li><a href="#chat" class="nav-link">
+                    <span class="nav-icon">💬</span>
+                    Chat
+                </a></li>
+                <li><a href="#login-page" class="nav-link logout">
+                    <span class="nav-icon">🚪</span>
+                    Logout
+                </a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <section id="home" class="content-page active">
+                <div class="page-header">
+                    <h1>Recently Found Items</h1>
+                    <p>Items found by students and staff - Help reunite them with their owners!</p>
+                </div>
+                
+                <div class="items-grid">
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">💧</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Blue Water Bottle</h3>
+                            <p><strong>Found by:</strong> John Doe</p>
+                            <p><strong>Location:</strong> Cafeteria</p>
+                            <p><strong>Class:</strong> 10A</p>
+                            <p><strong>Date:</strong> Aug 5, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">🎒</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Red Backpack</h3>
+                            <p><strong>Found by:</strong> Jane Smith</p>
+                            <p><strong>Location:</strong> Library</p>
+                            <p><strong>Class:</strong> 9B</p>
+                            <p><strong>Date:</strong> Aug 4, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">📚</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Math Textbook</h3>
+                            <p><strong>Found by:</strong> Mike Johnson</p>
+                            <p><strong>Location:</strong> Classroom 205</p>
+                            <p><strong>Class:</strong> 11C</p>
+                            <p><strong>Date:</strong> Aug 3, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">⌚</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Silver Watch</h3>
+                            <p><strong>Found by:</strong> Sarah Wilson</p>
+                            <p><strong>Location:</strong> Gym</p>
+                            <p><strong>Class:</strong> 12A</p>
+                            <p><strong>Date:</strong> Aug 2, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">🎧</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Black Headphones</h3>
+                            <p><strong>Found by:</strong> Alex Brown</p>
+                            <p><strong>Location:</strong> Computer Lab</p>
+                            <p><strong>Class:</strong> 11A</p>
+                            <p><strong>Date:</strong> Aug 1, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-image">
+                            <div class="placeholder-image">📱</div>
+                        </div>
+                        <div class="item-details">
+                            <h3>Phone Case</h3>
+                            <p><strong>Found by:</strong> Emma Davis</p>
+                            <p><strong>Location:</strong> Playground</p>
+                            <p><strong>Class:</strong> 10C</p>
+                            <p><strong>Date:</strong> Jul 31, 2025</p>
+                            <button class="btn btn--secondary">Contact Finder</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Found Items Page -->
+            <section id="found-items" class="content-page">
+                <div class="page-header">
+                    <h1>Report Found Item</h1>
+                    <p>Help reunite items with their owners by reporting what you've found</p>
+                </div>
+
+                <form class="item-form">
+                    <div class="form-section">
+                        <h3>Item Photo</h3>
+                        <div class="photo-upload">
+                            <input type="file" id="found-photo" class="file-input" accept="image/*">
+                            <label for="found-photo" class="file-upload-label">
+                                <span class="upload-icon">📷</span>
+                                <span class="upload-text">Click to upload photo</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Item Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="found-item-name" class="form-label">Item Name *</label>
+                                <input type="text" id="found-item-name" class="form-control" required placeholder="e.g., Water Bottle">
+                            </div>
+                            <div class="form-group">
+                                <label for="found-category" class="form-label">Category</label>
+                                <select id="found-category" class="form-control">
+                                    <option>Select Category</option>
+                                    <option>Electronics</option>
+                                    <option>Books & Stationery</option>
+                                    <option>Clothing & Accessories</option>
+                                    <option>Sports Equipment</option>
+                                    <option>Personal Items</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Finder Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="finder-name" class="form-label">Your Name *</label>
+                                <input type="text" id="finder-name" class="form-control" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="finder-contact" class="form-label">Contact Number</label>
+                                <input type="tel" id="finder-contact" class="form-control" placeholder="Your phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="finder-class" class="form-label">Class *</label>
+                                <input type="text" id="finder-class" class="form-control" required placeholder="e.g., 10A">
+                            </div>
+                            <div class="form-group">
+                                <label for="finder-section" class="form-label">Section *</label>
+                                <input type="text" id="finder-section" class="form-control" required placeholder="e.g., A">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Location Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="found-location" class="form-label">Place Found *</label>
+                                <input type="text" id="found-location" class="form-control" required placeholder="e.g., Library, Cafeteria">
+                            </div>
+                            <div class="form-group">
+                                <label for="found-date" class="form-label">Date Found</label>
+                                <input type="date" id="found-date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="found-description" class="form-label">Description</label>
+                            <textarea id="found-description" class="form-control" rows="4" placeholder="Describe the item in detail (color, size, brand, any distinctive features)..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--large">
+                        <span>📦</span>
+                        Submit Found Item Report
+                    </button>
+                </form>
+            </section>
+
+            <!-- Lost Items Page -->
+            <section id="lost-items" class="content-page">
+                <div class="page-header">
+                    <h1>Report Lost Item</h1>
+                    <p>Report your lost items to help others find and return them to you</p>
+                </div>
+
+                <form class="item-form">
+                    <div class="form-section">
+                        <h3>Item Photo</h3>
+                        <div class="photo-upload">
+                            <input type="file" id="lost-photo" class="file-input" accept="image/*">
+                            <label for="lost-photo" class="file-upload-label">
+                                <span class="upload-icon">📷</span>
+                                <span class="upload-text">Click to upload photo</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Item Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lost-item-name" class="form-label">Item Name *</label>
+                                <input type="text" id="lost-item-name" class="form-control" required placeholder="e.g., iPhone 13">
+                            </div>
+                            <div class="form-group">
+                                <label for="lost-category" class="form-label">Category</label>
+                                <select id="lost-category" class="form-control">
+                                    <option>Select Category</option>
+                                    <option>Electronics</option>
+                                    <option>Books & Stationery</option>
+                                    <option>Clothing & Accessories</option>
+                                    <option>Sports Equipment</option>
+                                    <option>Personal Items</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Owner Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-name" class="form-label">Your Name *</label>
+                                <input type="text" id="owner-name" class="form-control" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-contact" class="form-label">Contact Number *</label>
+                                <input type="tel" id="owner-contact" class="form-control" required placeholder="Your phone number">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-class" class="form-label">Class *</label>
+                                <input type="text" id="owner-class" class="form-control" required placeholder="e.g., 12B">
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-section" class="form-label">Section *</label>
+                                <input type="text" id="owner-section" class="form-control" required placeholder="e.g., B">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Location Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lost-location" class="form-label">Last Seen Location *</label>
+                                <input type="text" id="lost-location" class="form-control" required placeholder="Where did you last see the item?">
+                            </div>
+                            <div class="form-group">
+                                <label for="lost-date" class="form-label">Date Lost</label>
+                                <input type="date" id="lost-date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lost-description" class="form-label">Description</label>
+                            <textarea id="lost-description" class="form-control" rows="4" placeholder="Describe the item in detail (color, size, brand, any distinctive features)..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--large">
+                        <span>🔍</span>
+                        Submit Lost Item Report
+                    </button>
+                </form>
+            </section>
+
+            <!-- Search Page -->
+            <section id="search" class="content-page">
+                <div class="page-header">
+                    <h1>Search Items</h1>
+                    <p>Find lost or found items using our search and filter options</p>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Search for items (e.g., water bottle, phone)...">
+                        <button class="search-btn">
+                            <span>🔍</span>
+                            Search
+                        </button>
+                    </div>
+
+                    <div class="search-filters">
+                        <select class="filter-select">
+                            <option>All Categories</option>
+                            <option>Electronics</option>
+                            <option>Books & Stationery</option>
+                            <option>Clothing & Accessories</option>
+                            <option>Sports Equipment</option>
+                            <option>Personal Items</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Locations</option>
+                            <option>Library</option>
+                            <option>Cafeteria</option>
+                            <option>Gym</option>
+                            <option>Computer Lab</option>
+                            <option>Playground</option>
+                            <option>Classroom</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>Lost Items</option>
+                            <option>Found Items</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Dates</option>
+                            <option>Today</option>
+                            <option>This Week</option>
+                            <option>This Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="search-results">
+                    <h3>Search Results <span class="results-count">(6 items found)</span></h3>
+                    <div class="items-grid">
+                        <div class="item-card search-result">
+                            <div class="item-status lost">LOST</div>
+                            <div class="item-image">
+                                <div class="placeholder-image">🎧</div>
+                            </div>
+                            <div class="item-details">
+                                <h3>Black Headphones</h3>
+                                <p><strong>Owner:</strong> David Lee</p>
+                                <p><strong>Last Seen:</strong> Music Room</p>
+                                <p><strong>Date:</strong> Aug 5, 2025</p>
+                                <p><strong>Contact:</strong> 10C</p>
+                                <button class="btn btn--secondary">Contact Owner</button>
+                            </div>
+                        </div>
+
+                        <div class="item-card search-result">
+                            <div class="item-status found">FOUND</div>
+                            <div class="item-image">
+                                <div class="placeholder-image">📝</div>
+                            </div>
+                            <div class="item-details">
+                                <h3>Notebook</h3>
+                                <p><strong>Found by:</strong> Lisa Wang</p>
+                                <p><strong>Location:</strong> Cafeteria</p>
+                                <p><strong>Date:</strong> Aug 4, 2025</p>
+                                <p><strong>Contact:</strong> 9A</p>
+                                <button class="btn btn--secondary">Contact Finder</button>
+                            </div>
+                        </div>
+
+                        <div class="item-card search-result">
+                            <div class="item-status lost">LOST</div>
+                            <div class="item-image">
+                                <div class="placeholder-image">👓</div>
+                            </div>
+                            <div class="item-details">
+                                <h3>Reading Glasses</h3>
+                                <p><strong>Owner:</strong> Robert Chen</p>
+                                <p><strong>Last Seen:</strong> Library</p>
+                                <p><strong>Date:</strong> Aug 3, 2025</p>
+                                <p><strong>Contact:</strong> 11B</p>
+                                <button class="btn btn--secondary">Contact Owner</button>
+                            </div>
+                        </div>
+
+                        <div class="item-card search-result">
+                            <div class="item-status found">FOUND</div>
+                            <div class="item-image">
+                                <div class="placeholder-image">🔑</div>
+                            </div>
+                            <div class="item-details">
+                                <h3>Key Chain</h3>
+                                <p><strong>Found by:</strong> Maria Garcia</p>
+                                <p><strong>Location:</strong> Parking Lot</p>
+                                <p><strong>Date:</strong> Aug 2, 2025</p>
+                                <p><strong>Contact:</strong> Staff</p>
+                                <button class="btn btn--secondary">Contact Finder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Page -->
+            <section id="chat" class="content-page">
+                <div class="page-header">
+                    <h1>Messages</h1>
+                    <p>Chat with other users about lost and found items</p>
+                </div>
+
+                <div class="chat-container">
+                    <div class="chat-sidebar">
+                        <div class="chat-sidebar-header">
+                            <h3>Conversations</h3>
+                            <span class="new-message-btn">✉️</span>
+                        </div>
+                        <div class="chat-list">
+                            <div class="chat-item active">
+                                <div class="chat-avatar">JD</div>
+                                <div class="chat-info">
+                                    <h4>John Doe</h4>
+                                    <p>Is this your water bottle?</p>
+                                    <span class="chat-time">2:30 PM</span>
+                                </div>
+                                <div class="unread-badge">2</div>
+                            </div>
+
+                            <div class="chat-item">
+                                <div class="chat-avatar">JS</div>
+                                <div class="chat-info">
+                                    <h4>Jane Smith</h4>
+                                    <p>Found your backpack!</p>
+                                    <span class="chat-time">1:15 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="chat-item">
+                                <div class="chat-avatar">MJ</div>
+                                <div class="chat-info">
+                                    <h4>Mike Johnson</h4>
+                                    <p>Math book available</p>
+                                    <span class="chat-time">11:45 AM</span>
+                                </div>
+                            </div>
+
+                            <div class="chat-item">
+                                <div class="chat-avatar">SW</div>
+                                <div class="chat-info">
+                                    <h4>Sarah Wilson</h4>
+                                    <p>Thanks for finding my watch!</p>
+                                    <span class="chat-time">Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-main">
+                        <div class="chat-header">
+                            <div class="chat-avatar">JD</div>
+                            <div class="chat-user-info">
+                                <h3>John Doe</h3>
+                                <p class="online-status">🟢 Online</p>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="chat-action-btn">📞</button>
+                                <button class="chat-action-btn">ℹ️</button>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages">
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Hi! I found a blue water bottle in the cafeteria. Is this yours?</p>
+                                    <span class="message-time">2:25 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="message received">
+                                <div class="message-content">
+                                    <div class="message-image">
+                                        <div class="placeholder-image">💧</div>
+                                        <p>Photo of the water bottle</p>
+                                    </div>
+                                    <span class="message-time">2:26 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Yes! That's mine. Thank you so much!</p>
+                                    <span class="message-time">2:30 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="message received">
+                                <div class="message-content">
+                                    <p>Great! I'll be in the cafeteria for another 10 minutes if you want to pick it up.</p>
+                                    <span class="message-time">2:31 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="message sent">
+                                <div class="message-content">
+                                    <p>Perfect! I'm on my way. Thanks again! 😊</p>
+                                    <span class="message-time">2:32 PM</span>
+                                </div>
+                            </div>
+
+                            <div class="typing-indicator">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p>John is typing...</p>
+                            </div>
+                        </div>
+
+                        <div class="chat-input">
+                            <button class="attachment-btn">📎</button>
+                            <input type="text" placeholder="Type a message..." class="message-input">
+                            <button class="emoji-btn">😊</button>
+                            <button class="send-btn">
+                                <span>➤</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
